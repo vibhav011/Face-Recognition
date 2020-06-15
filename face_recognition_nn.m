@@ -1,5 +1,6 @@
 clear;
 addpath('simpleNN')
+addpath('simpleNN/lib')
 
 load("data/face/YaleB_32x32.mat");
 fea = fea';
@@ -7,7 +8,7 @@ gnd = gnd';
 % fea stores face images in 1024 x 2414 vector
 % gnd stores labels in 1 x 2414 vector
 
-num_images = size(gnd, 2);      % number of images = 2414
+num_images = size(gnd, 2);                % number of images = 2414
 rand_list = randperm(num_images, 100);    % list of 100 indices choosen randomly to be used as testing data
 rand_list = sort(rand_list, 'descend');
 
